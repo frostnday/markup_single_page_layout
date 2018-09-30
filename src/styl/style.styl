@@ -1,0 +1,171 @@
+html
+  font-size 62.5%
+
+// フォント
+defaultFont = "Hiragino kaku Gothic ProN", Meiryo, sans-serif
+categoryFont = "Trevuchet MS", "Hiragino kaku Gothic ProN", Meiryo, sans-serif
+
+// 種類ごとのカラー
+defaultColor = #aaaaaa
+maindishColor = #ffc0cb
+appetizerColor = #76c047
+columnColor = #fff100
+breaktimeColor = #c1efff
+itemWidth = 180px
+imageHeightM = 146px
+imageHeightL = 403px
+
+body
+  padding 30px
+  background-color #f6f7fb
+  color #333333
+  font-size 1.2rem
+  font-family defaultFont
+
+*, *::after, *::before
+  box-sizing border-box
+
+a
+  &:link, &:visited, &:hover, &:active
+    color #7c5119
+    text-decoration none
+
+.header
+  padding 25px
+  border-bottom none
+  text-align center
+  .logo
+    width 136px
+    height 136px
+    transition -webkit-transform 0.3s
+    transition transform 0.3s
+    &:hover
+      -webkit-transform rotate(360deg)
+      transform rotate(360deg)
+  .nav
+    margin 35px auto 10px
+    .nav-item
+      margin-top 20px
+      text-align center
+      letter-spacing 1px
+      font-weight 1px
+      font-size 1.3rem
+      > a
+        display inline-block
+        &:after
+          content ''
+          display block
+          width 0
+          margin 6px auto 0
+          border-bottom 1px solid #7c5119
+          transition width 0.3s ease-in-out
+        &:hover::after
+          width 100%
+
+.item
+  width itemWidth
+  margin-bottom 4px
+  border-bottom 3px solid
+  padding 8px
+  border-radius 5px
+  background-color #ffffff
+  overflow hidden
+  > a
+    display block
+    margin -8px -8px -11px // ネガティブマージンで領域を広げる
+    padding 8px 8px 11px // ↑で広げた分、padding領域を広げる
+    border-radius inherit // 親要素の値を引き継ぐ
+    color #777777 // リンクテキストとして文字色が変わってしまうので指定し直す
+    transition all 0.3s;
+    &:hover
+      box-shadow 0 0 6px -1px rgba(0, 0, 0, 0.3)
+      opacity 0.8
+      &:before
+        opacity 1
+      &:after
+        left 50%
+        opacity 1
+    &:before
+      content ''
+      position absolute
+      top 8px
+      right 8px
+      left 8px
+      display block
+      height 109px
+      background rgba(0, 0, 0, 0.5)
+      opacity 0
+      transition opacity 0.3s linear
+    &:after
+      content 'MORE'
+      position absolute
+      top 43.5px
+      left 150%
+      margin-left -50px
+      display block
+      width 100px
+      padding 8px
+      border solid 3px #ffffff
+      color #ffffff
+      text-align center
+      letter-spacing 3px
+      font-size 1.6rem
+      font-family categoryFont
+      opacity 0
+      transition all 0.3s ease-in-out
+
+  .image
+    display block
+    width 100%
+    height 109px
+  .category
+    margin 15px 9px 10px
+    color defaultColor
+    letter-spacing 1px
+    font-family categoryFont
+    &:before
+      content ''
+      display inline-block
+      width 19px
+      height 19px
+      margin-right 5px
+      border 2px solid
+      border-radius 50%
+      vertical-align -5px
+  .description
+    margin 10px
+    line-height 1.5
+
+categoryBeforeMixin(color)
+  .category
+    &:before
+      border-color color
+
+.item-maindish
+  border-color maindishColor
+  categoryBeforeMixin(@border-color)
+.item-appetizer
+  border-color appetizerColor
+  categoryBeforeMixin(@border-color)
+.item-column
+  border-color columnColor
+  categoryBeforeMixin(@border-color)
+.item-breaktime
+  border-color breaktimeColor
+  categoryBeforeMixin(@border-color)
+.item-m
+  width (itemWidth * 2) + 4
+  a:before
+    height imageHeightM
+  a:after
+    top 62px
+  .image
+    height imageHeightM
+.item-l
+  width ((itemWidth * 2) + 4) * 2
+  a:before
+    height imageHeightL
+  a:after
+    top 190.5px
+  .image
+    height imageHeightL

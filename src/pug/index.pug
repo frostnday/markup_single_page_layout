@@ -1,0 +1,117 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    title グリッドレイアウト
+    link(rel="stylesheet",href="../css/main.css")
+
+  body
+    header.header.item
+      h1
+        a(href="#")
+          img.logo(src="../images/logo.png" alt="SAMPLE SITE 2")
+      nav.nav
+        ul
+          li.nav-item
+            a(href="#") HOME
+          li.nav-item
+            a(href="#") ABOUT
+          li.nav-item
+            a(href="#") MAIN DISH
+          li.nav-item
+            a(href="#") APPETIZER
+          li.nav-item
+            a(href="#") BREAK TIME
+          li.nav-item
+            a(href="#") COLUMN
+          li.nav-item
+            a(href="#") OTHER
+    section.item.item-l.item-maindish
+      a(href="#")
+        img.image(src="../images/image_L_1.jpg" alt="メインディッシュ")
+        div.category MAIN DISH
+        p.description Lorem ipsum dolor sit amet. consectetur adipisicing elit sed eiusmod tempir insididunt ut labor et dolore magn aaliwua
+    section.item.item-m.item-appetizer
+      a(href="#")
+        img.image(src="../images/image_M_1.jpg" alt="前菜")
+        div.category APPETIZER
+        p.description Lorem ipsum dolor sit amet. consectetur adipisicing elit sed eiusmod tempir insididunt ut labor et dolore magn aaliwua
+    section.item.item-m.item-maindish
+      a(href="#")
+        img.image(src="../images/image_M_2.jpg" alt="メインディッシュ")
+        div.category MAIN DISH
+        p.description Lorem ipsum dolor sit amet. consectetur adipisicing elit sed eiusmod tempir insididunt ut labor et dolore magn aaliwua
+    section.item.item-maindish
+      a(href="#")
+        img.image(src="../images/image_S_1.jpg" alt="メインディッシュ")
+        div.category MAIN DISH
+        p.description Lorem ipsum dolor sit amet. consectetur adipisicing elit sed eiusmod tempir insididunt ut labor et dolore magn aaliwua
+    section.item.item-appetizer
+      a(href="#")
+        img.image(src="../images/image_S_2.jpg" alt="前菜")
+        div.category APRETIZER
+        p.description Lorem ipsum doler site amet consectetur adipising elit
+    section.item.item-m.item-breaktime
+      a(hre="#")
+        img.image(src="../images/image_M_3.jpg" alt="おやつの時間")
+        div.category BREAK TIME
+        p.description Lorem ipsum dolor sit amet. consectetur adipisicing elit sed eiusmod tempir insididunt ut labor et dolore magn aaliwua
+    section.item.item-column
+      a(href="#")
+        img.image(src="../images/image_S_3.jpg" alt="コラム")
+        div.category COLUMN
+        p.description Lorem ipsum doler sit amet consectetur adipisicing elit
+    section.item.item-breaktime
+      a(href="#")
+        img.image(src="../images/image_S_4.jpg" alt="おやつの時間")
+        div.category BREAK TIME
+        p.description Lorem ipsum doler sit amet consectetur adipisici
+    section.item.item-maindish
+      a(href="#")
+        img.image(src="../images/image_S_5.jpg" alt="メインディッシュ")
+        div.category MAIN DISH
+        p.description LOrem ipsum dolor sit amet, consectertur adipisincing elit, sed do eiumod tempor incididunt ut labore et dolore magna aliqua
+    section.item.item-breaktime
+      a(href="#")
+        img.image(src="../images/image_S_6.jpg" alt="おやつの時間")
+        div.category BREAK TIME
+        p.desctiption Lorem ipsum dolor sit amet. consectetur adipisincing elit. sed do eiumod tempor insididunt ut labore ata doloer magna aliqua
+    section.item.item-maindish
+      a(href="#")
+        img.image(src="../images/image_S_7.jpg" alt="メインディッシュ")
+        div.category MAINDISH
+        p.description  Lorem ipsum dolor sit amet. consectetur adipisincing elit. sed do eiumod tempor insididunt ut labore ata doloer magna aliqua
+    section.item.item-breaktime
+      a(href="#")
+        img.image(src="../images/image_S_8.jpg" alt="おやつの時間")
+        div.category BREAK TIME
+        p.description Lorem ipsum dolor sit amet. consectetur adipisincing elit. sed do eiumod tempor insididunt ut labore ata doloer magna aliqua
+    section.item.item-column
+      a(href="#")
+        img.image(src="../images/image_S_9.jpg" alt="コラム")
+        div.category COLUMN
+        p.description Lorem ipsum dolor sit amet. consectetur adipisincing elit. sed do eiumod tempor insididunt ut labore ata doloer magna aliqua
+    section.item.item-m.item-appetizer
+      a(href="#")
+        img.image(src="../images/image_M_4.jpg")
+        div.category APPERIZER
+        p.description Lorem ipsum dolor sit amet. consectetur adipisicing elit sed eiusmod tempir insididunt ut labor et dolore magn aaliwua
+    section.item.item-maindish
+      a(href="#")
+        img.image(src="../images/image_S_10.jpg" alt="メインディッシュ")
+        div.category MAIN DISH
+        p.description Lorem ipsum dolor sit amet. consectetur adipisincing elit. sed do eiumod tempor insididunt ut labore ata doloer magna aliqua
+
+
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js")
+    script.
+      window.onload = () => {
+        new Masonry('body', {
+          itemSelector: '.item',
+          columnWidth: 180,
+          gutter: 4
+        });
+      }
+
+
+

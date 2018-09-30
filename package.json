@@ -1,0 +1,30 @@
+{
+  "name": "standard-layout",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "pug": "gulp pug",
+    "stylus": "gulp stylus",
+    "dev": "gulp pug stylus",
+    "watch": "gulp pug_watch stylus_watch"
+  },
+  "repository": "git@github.com:frostnday/markup_sample_standard.git",
+  "author": "frostnday <frostnday@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-stylus": "^2.7.0",
+    "nib": "^1.1.2",
+    "require-dir": "^1.0.0"
+  }
+}
