@@ -1,0 +1,290 @@
+html
+  font-size 62.5%
+*, *:before, *:after
+  box-sizing border-box
+
+body
+  background #151515 url(../images/bg.png) no-repeat fixed left bottom
+  background-size cover
+  color #ffffff
+  text-align center
+  font-size 1.4rem
+  font-family 'Raleway', "Hiragino kaku Gothic ProN", Meiryo, sans-serif
+
+header
+  padding 170px 30px 80px
+
+.site-title
+  margin 50px 0 40px
+  font-size 7.6rem
+.site-title-sub
+  margin 0 0 30px
+  letter-spacing 1px
+  font-size 2.2rem
+.site-title-sub:before
+.site-title-sub:after
+  content ''
+  display inline-block
+  width 140px
+  height 2px
+  margin 0 30px
+  background-color #ffffff
+  vertical-align middle
+.site-description
+  margin-bottom 50px
+  color #888888
+  font-size 1.6rem
+.buttons .button
+  margin 10px
+.button
+  display inline-block
+  width 200px
+  padding 20px
+  border-radius 4px
+  background-color #afa58d
+  color #ffffff
+  text-decoration none
+  letter-spacing 1px
+  font-size 1.2rem
+  &:hover
+    opacity 0.9
+.button-showy
+  background-color #f1b400
+.about
+  padding 80px 30px
+  background-color #ffffff
+  color #333333
+.heading
+  position relative
+  display: inline-block
+  padding-bottom: 15px
+  margin 30px 0 15px
+  letter-spacing 2px
+  font-size 4rem
+  &:before
+  &:after
+    content ''
+    display inline-block
+    width 12px
+    height 12px
+    margin 0 20px
+    border 1px solid
+    vertical-align 8px
+    -webkit-transform rotate(45deg)
+    -ms-trasnsform rotate(45deg)
+    transform rotate(45deg)
+  &:before
+    bottom 5px
+.about-text
+  margin: 30px 0
+  line-height 2.5;
+
+.works
+  background-color #383634
+  padding 80px 0
+
+.works-wrapper
+  display: table
+  width 100%
+  margin-top 60px
+  table-layout fixed
+.work-box
+  position relative
+  display table-cell
+  overflow hidden
+  img
+    transition -webkit-transform 0.5s ease-in-out
+    transition transform 0.5s ease-in-out
+  &:nth-of-type(odd) img
+    -webkit-transform-origin top center
+    transform-origin top center
+  &:nth-of-type(even) img
+    -webkit-transform-origin bottom center
+    transform-origin bottom center
+  &:hover img
+    -webkit-transform scale(1.1)
+    transform scale(1.1)
+  &:after
+    content ''
+    position absolute
+    top 50% // 下半分から表示
+    left 0
+    width 100%
+    height 50% // サイズの親の要素の縦サイズが半分にしている
+    background no-repeat
+    background-size 100% 100%
+    opacity 0.2
+    transform scaleY(-1)
+  &:nth-child(odd) .work-image
+    margin 60% 0 0
+  &:nth-child(odd) .work-description
+  &:after
+    top 0
+
+.work-box.tree:after
+  background-image url('../images/tree.jpg')
+.work-box.building:after
+  background-image url('../images/building.jpg')
+.work-box.lake:after
+  background-image url('../images/lake.jpg')
+.work-box.sky:after
+  background-image url('../images/sky.jpg')
+
+.work-image
+  display block
+  width 100%
+  margin 0 0 60%
+.work-description
+  position absolute
+  top 50%
+  left 0
+  z-index 1
+  width 100%
+  height 50%
+  orverflow auto
+.work-description-inner
+  display table
+  width 100%
+  height 100%
+  padding 20px
+.work-text
+  display table-cell
+  vertical-align middle
+  font-size 1.2rem
+  line-height 2
+  > .button
+    width 60%
+    margin-top 20px
+    padding 3px
+.button-ghost
+  border 1px solid #ffffff
+  background-color rgba(255, 255, 255, 0.15)
+
+
+.skills
+  padding 80px 0
+  background-color #ffffff
+  color #333333
+.skills-wrapper
+  display table
+  width 80%
+  margin 50px auto 0
+  table-layout fixed
+.skill-box
+  display: table-cell
+.skill-icon
+  width 150px
+  height 150px
+  margin-bottom 30px
+  border 4px solid
+  border-radius 50%
+  color #f1b400
+  font-size 8rem
+  line-height 142px
+.skill-title
+  margin 0 20px 20px
+  font-size 2rem
+.skill-text
+  margin 0 20px
+  line-height 2
+
+.contact
+  padding 80px 0 150px
+.contact-form
+  width 50%
+  margin 50px auto 0
+
+  input[type=text],
+  textarea
+    display block
+    width 100%
+    margin-bottom 10px
+    padding 15px
+    outline none
+    border 1px solid rgba(255, 255, 255, 0.4)
+    border-radius 0
+    background-color rgba(255, 255, 255, 0.05)
+    color #ffffff
+    &:focus
+      box-shadow 0 0 8px rgba(255, 255, 255, 0.5) inset
+  textarea
+    height 150px
+  input[type=submit]
+    display block
+    width 200px
+    margin 40px auto 0
+    padding 15px
+    border 1px solid rgba(255, 255, 255, 0.4)
+    border-radius 5px
+    background-color transparent
+    color rgba(255, 255, 255, 0.6)
+    cursor pointer
+    &:hover
+      background-color: rgba(255, 255, 255 0.05)
+
+
+.footer
+  padding 12px 0
+  font-size 1.3rem
+
+@media (max-width 1024px)
+  body
+    background-image none
+
+@media (max-width: 768px)
+  body
+    font-size 1.3rem
+  .header
+    padding-top 60px
+  .button
+    &:hover
+      opacity 1
+
+  .site-title
+    margin-top 35px
+    font-size 5rem
+  .site-title-sub
+    font-size 1.7rem
+    &:before
+    &:after
+      width 8px
+      height 8px
+      margin 0 12px
+      vertical-align 5px
+
+  .heading
+    font-size 2.5rem
+  .about-text
+    line-height 1.8rem
+
+  .works-wrapper
+  .work-box
+    display block
+  .work-image
+    display none
+  .work-description
+    position relative
+  .work-box::after
+    top 0
+    height 100%
+    background-size cover
+    transform none
+
+  .skills-wrapper
+  .skill-box
+    display block
+
+  .skill-icon
+    width 100px
+    height 100px
+    font-size 5rem
+    line-height 92px
+  .skill-box
+    margin 40px auto
+  .skill-text
+    margin 0
+
+  .contact-form
+    width 80%
+  .contact
+    padding-bottom 80px

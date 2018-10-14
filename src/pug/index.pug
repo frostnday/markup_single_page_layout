@@ -2,7 +2,117 @@ doctype html
 html(lang="ja")
   head
     meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0")
     title シングルページレイアウト
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous")
     link(rel="stylesheet",href="../css/main.css")
 
   body
+    header.header
+      p.site-title-sub Web designer's portfolio
+      h1.site-title Hi My Name Is Mori
+      p.site-description Check out some of my works
+      div.buttons
+        a.button(href="#about") Learn more
+        a.button.button-showy(href="#contact") Send Message
+    section.about(id="about")
+      h2.heading ABOUT ME
+      p.about-text
+        | はじめまして。日本でwebデザイナーをしています。
+        br
+        | デザインの専門学校を卒業し、制作会社のでの業務経験を経て、現在はフリーランスとして働いています。
+      p.about-text
+        | このサイトは「HTML/CSS モダンコーディング」という書籍のサンプルとしてつくられた、架空のWebデザイナーのポートフォリオサイトです。
+        br
+        | このサンプルのようなサイトをいちから作る過程を通して、HTMLとCSSの実践的なコーディングノウハウを学ぶことができおます。
+    section.works
+      h2.heading WORKS
+      div.works-wrapper
+        div.work-box.tree
+          img.work-image(src="../images/tree.jpg" alt="制作事例1")
+          div.work-description
+            div.work-description-inner
+              p.work-text
+                | ひとつめの制作事例が入ります。
+                br
+                | 簡単な説明が入ります。
+                br
+                | 使用ツール: XXX, XXX, XXX
+                br
+                a.button.button-ghost(href="#") READ MORE
+        div.work-box.lake
+          img.work-image(src="../images/building.jpg" alt="制作事例2")
+          div.work-description
+            div.work-description-inner
+              p.work-text
+                | ふたつめの制作事例が入ります。
+                br
+                | 簡単な説明が入ります。
+                br
+                | 使用ツール: XXX, XXX, XXX
+                br
+                a.button.button-ghost(href="#") READ MORE
+        div.work-box.sky
+          img.work-image(src="../images/lake.jpg" alt="制作事例3")
+          div.work-description
+            div.work-description-inner
+              p.work-text
+                | みっつめの制作事例が入ります。
+                br
+                | 簡単な説明が入ります
+                br
+                | 使用ツール: XXX, XXX, XXX
+                br
+                a.button.button-ghost(href="#") READ MORE
+        div.work-box
+          img.work-image(src="../images/sky.jpg" alt="制作事例4")
+          div.work-description
+            div.work-description-inner
+              p.work-text
+                | ４つ目の制作事例が入ります。
+                br
+                | 簡単な説明が入ります
+                br
+                | 使用ツール: XXX, XXX, XXX
+                br
+                a.button.button-ghost(href="#") READ MORE
+    section.skills
+      h2.heading MY SKILLS
+      div.skills-wrapper
+        div.skill-box
+          i.skill-icon.far.fa-lightbulb
+          div.skill-title IDEA
+          p.skill-text
+           | 何かを考えることが好きです
+           br
+           | 新しいことを思いついては試しています。
+           br
+           | ディレクションの経験もあります。
+        div.skill-box
+          i.skill-icon.fa.fa-paint-brush
+          div.skill-title DESIGN
+          p.skill-text
+           | 見た目の綺麗さだけじゃなくて、
+           br
+           | 使いやすさ、情報の伝わりやすさなど、
+           br
+           | その先まで考えることを意識しています。
+        div.skill-box
+          i.skill-icon.fa.fa-code
+          div.skill-title CODING
+          p.skill-text
+           | HTML/CSSコーディングも行います
+           br
+           | 正しく美しいマークアップと
+           br
+           | 今後の変更への強さを考慮しています。
+    section.contact(id="contact")
+      h2.heading CONTACT
+      form.contact-form
+        input(type="text" name="name" placeholder="NAME")
+        textarea(name="massage" placeholder="MESSAGE")
+        input(type="submit" value="SEND")
+    footer.footer
+      | © sample site
+    script(src="lib/placehokders.min.js")
